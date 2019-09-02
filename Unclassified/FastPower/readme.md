@@ -12,6 +12,6 @@
 求斐波那契序列较大的某位值
 $f(1)=0,f(2)=1$
 递推公式：
-$f(n)=f(n-1)+f(n-2)$
+$$f(n)=f(n-1)+f(n-2)$$
 矩阵表示：
 $  \left[\begin{matrix} f(n)\\f(n-1) \end{matrix} \right] $=$\left[ \begin{matrix} 1 & 1\\ 1& 0 \end{matrix}  \right]$ $ \left[ \begin{matrix} f(n-1)\\f(n-2)\end{matrix}  \right]  $
