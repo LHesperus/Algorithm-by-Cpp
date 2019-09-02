@@ -15,3 +15,4 @@ $f(1)=0,f(2)=1$
 $$f(n)=f(n-1)+f(n-2)$$
 矩阵表示：
 $  \left[\begin{matrix} f(n)\\f(n-1) \end{matrix} \right] $=$\left[ \begin{matrix} 1 & 1\\ 1& 0 \end{matrix}  \right]$ $ \left[ \begin{matrix} f(n-1)\\f(n-2)\end{matrix}  \right]  $
+如果网页无法显示公式，则用Cmd Markdown查看。
