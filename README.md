@@ -3,3 +3,4 @@
 
 ## 分类
 [[FastPower]](https://github.com/LHesperus/Algorithm-by-Cpp/tree/master/Unclassified/FastPower) 快速幂
+[[KMP]](https://github.com/LHesperus/Algorithm-by-Cpp/tree/master/KMP) KMP算法
