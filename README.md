@@ -9,4 +9,3 @@
 ## 学习笔记
 
 [PDF](https://github.com/LHesperus/Algorithm-by-Cpp/blob/master/algorithm-latex/algorithm.pdf)
-[PDF](https://github.com/LHesperus/latex/blob/master/Passive%20Bistatic%20radar/DTMB/DTMB.pdf)
