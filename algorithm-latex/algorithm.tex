@@ -1,4 +1,15 @@
 \documentclass[lang=cn,11pt]{elegantbook}
+%加水印
+\usepackage{eso-pic}
+\newcommand{\watermark}[3]{\AddToShipoutPictureBG{
+		\parbox[b][\paperheight]{\paperwidth}{
+			\vfill%
+			\centering%
+			\tikz[remember picture, overlay]%
+			\node [rotate = #1, scale = #2] at (current page.center)%
+			{\textcolor{gray!80!cyan!30}{#3}};
+			\vfill}}}
+\usepackage{blindtext}
 % title info
 \title{算法笔记}
 \subtitle{algorithm note}
@@ -13,6 +24,9 @@
 \cover{cover.jpg}
 
 \begin{document}
+	%% 水印
+	\watermark{60}{10}{github:LHesperus}
+	\clearpage
 	
 	\maketitle
 	\tableofcontents
