@@ -8,4 +8,4 @@
 
 ## 学习笔记
 
-[PDF](http://huajh7.com/cv/awesome-cv-cn.pdf)
+[PDF](https://github.com/LHesperus/Algorithm-by-Cpp/blob/master/algorithm-latex/algorithm.pdf)
