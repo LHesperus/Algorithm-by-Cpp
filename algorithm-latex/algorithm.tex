@@ -1,0 +1,86 @@
+\documentclass[lang=cn,11pt]{elegantbook}
+% title info
+\title{算法笔记}
+\subtitle{algorithm note}
+% bio info
+\author{LHesperus}
+\institute{UESTC}
+\date{2019.09.29-\today}
+% extra info
+\version{1.00}
+\extrainfo{ e}
+\logo{logo.png}
+\cover{cover.jpg}
+
+\begin{document}
+	
+	\maketitle
+	\tableofcontents
+	\mainmatter
+	\hypersetup{pageanchor=true}
+	% add preface chapter here if needed
+	\chapter{数论算法}
+	\section{最大公约数}
+	两个不同时为0 的数a 与b 的\textbf{最大公因数}是同时整除它们的两个最大
+	的数，记为gcd(a, b)，同时，如果gcd(a,b) = 1，我们称它们\textbf{互素}。
+	
+$\textbf{O(log(N))}$	\textbf{欧几里得算法/辗转相除法：}$gcd(m,n) = gcd(n,m \mod n)$
+
+递归不会栈溢出：gcd函数的递归层数不会超过$4.785lgN+1.6723,N=\max{(a,b)}$,让gcd递归最多层的是$gcd(F_{n},F_{n-1})$,$F_{n}$是Fibonacci数。
+	\section{扩展欧几里得算法}
+\textbf{应用：}
+	\begin{itemize}
+	\item 求解不定方程(如$99x+78b=6$的整数解)；
+	
+	\item 求解模线性方程(线性同余方程)；
+	
+	\item 求解模的逆元；
+	\end{itemize}
+
+	\subsection{裴蜀定理}
+	若a 和b 是整数，方程ax+by=d 有整数解当且􂎑当gcd(a,b) | d。
+	例如，方程3x+6y=2 就不存在整数解，方程3x+6y=3 存在（无数多
+	个）整数解，其中一个是x=1，y=0。
+	
+	这个定理给我们了一个判定形如ax+by=d 的方程是否有整数解的方
+	法，但是它并没有告诉我们如何求解。求解这样的方程是扩展欧几里得算法
+	的内容。
+	
+	\subsection{同余}
+	$a=b(\mod p)$:$a,b$模$p$后的余数相同。\\
+	若\[
+	\begin{cases}
+	a1=b1(\mod p)\\
+	a2=b2(\mod p)\\
+	\end{cases}
+	\]
+	则：	\[
+	\begin{cases}
+	a1\pm a2=b1 \pm b2 (\mod p)\\
+	a1\cdot a2=b1 \cdot b2 (\mod p)\\
+	\end{cases}
+	\]
+	\begin{example}
+	求关于x 的同余方程$ax =1 (\mod b)$ 的最小正整数解。
+	其中$0 \leq a, b \leq 2<10^9$，并且保证该方程有解。
+	
+	如果上述同余方程被满足的话，一定存在整数y 使得$ax = 1+by$，这
+	样我们可以直接利用扩展欧几里得算法得出一个解。至于最小正整数解也是
+	可以很容易就计算得出，因为在$1 \leq x \leq b$ 中这个方程有唯一解。
+\end{example}
+	\subsection{乘法逆元}
+	如果$ax=1 (\mod p)$,且$gcd(a,p)=1$ (a与p互质)，则称a关于模p的乘法逆元为x。
+	
+	在同余意义下，加减法和乘法都和普通的运算没什么区别，但是唯独
+	“除法”有一些区别：\textbf{当没有逆元时无法进行“除法”}！
+	
+	如$15\times 2 = 20\times 2 (\mod 10)$
+	
+	但	$15\neq 20 (\mod 10)$
+	因为在模10 意义下，2 是没有乘法逆元的。
+	
+	\section{求解模线性方程}
+
+	\bibliography{reference}
+	\section{快速幂}
+\end{document}
