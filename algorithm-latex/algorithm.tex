@@ -74,14 +74,7 @@ $\textbf{O(log(N))}$	\textbf{欧几里得算法/辗转相除法：}$gcd(m,n) = g
 	a1\cdot a2=b1 \cdot b2 (\mod p)\\
 	\end{cases}
 	\]
-	\begin{example}
-	求关于x 的同余方程$ax =1 (\mod b)$ 的最小正整数解。
-	其中$0 \leq a, b \leq 2<10^9$，并且保证该方程有解。
-	
-	如果上述同余方程被满足的话，一定存在整数y 使得$ax = 1+by$，这
-	样我们可以直接利用扩展欧几里得算法得出一个解。至于最小正整数解也是
-	可以很容易就计算得出，因为在$1 \leq x \leq b$ 中这个方程有唯一解。
-\end{example}
+
 	\subsection{乘法逆元}
 	如果$ax=1 (\mod p)$,且$gcd(a,p)=1$ (a与p互质)，则称a关于模p的乘法逆元为x。
 	
@@ -93,7 +86,15 @@ $\textbf{O(log(N))}$	\textbf{欧几里得算法/辗转相除法：}$gcd(m,n) = g
 	但	$15\neq 20 (\mod 10)$
 	因为在模10 意义下，2 是没有乘法逆元的。
 	
-	\section{求解模线性方程}
+	\subsection{求解模线性方程}
+		\begin{example}
+		求关于x 的同余方程$ax =1 (\mod b)$ 的最小正整数解。
+		其中$0 \leq a, b \leq 2<10^9$，并且保证该方程有解。
+		
+		如果上述同余方程被满足的话，一定存在整数y 使得$ax = 1+by$，这
+		样我们可以直接利用扩展欧几里得算法得出一个解。至于最小正整数解也是
+		可以很容易就计算得出，因为在$1 \leq x \leq b$ 中这个方程有唯一解。
+	\end{example}
 	\section{快速幂}
 	\bibliography{reference}
 
